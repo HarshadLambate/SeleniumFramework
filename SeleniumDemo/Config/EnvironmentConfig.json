@@ -1,0 +1,16 @@
+﻿{
+  "environments": [
+    {
+      "name": "DEV",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+      "username": "dev_user",
+      "password": "dev_password"
+    },
+    {
+      "name": "QA",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+      "username": "qa_user",
+      "password": "qa_password"
+    }
+  ]
+}

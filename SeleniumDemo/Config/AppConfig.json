@@ -1,0 +1,5 @@
+﻿{
+  "environment": "QA",
+  "browser": "chrome",
+  "maxReports": "10"
+}
