@@ -17,12 +17,9 @@ namespace SeleniumDemo.Utilities
      
         public static void ExtentReportInit()
         {
-            string currentDate = DateTime.Now.ToString("dddd, dd MMMM yyyy ");
-            string currentTime = DateTime.Now.ToShortTimeString().ToString().Replace(":", ".");
-            string currentDateTime = currentDate + currentTime;
-
+            string currentDateTime = DateTime.Now.ToString("dddd, dd MMMM yyyy HH.mm");
             string projectPath = TestHelper.GetProjectPath();
-            string reportPath = projectPath + "Reports\\TestResultReport_" + currentDateTime + ".html";
+            string reportPath = Path.Combine(projectPath, "Reoprts", $"TestResultReport_{currentDateTime}.html");
             
             extent = new ExtentReports();
             var sparkReporter = new ExtentSparkReporter(reportPath);

@@ -44,9 +44,9 @@ namespace SeleniumDemo
 
         public static AppConfig GetAppConfig()
         {
-            string assemblyPath = AppDomain.CurrentDomain.BaseDirectory;
+            string projectPath = GetProjectPath();
             string fileName = @"Config\AppConfig.json";
-            string filePath = Path.Combine(assemblyPath.Replace(@"bin\Debug\", ""), fileName);
+            string filePath = Path.Combine(projectPath, fileName);
             return JsonConvert.DeserializeObject<AppConfig>(File.ReadAllText(filePath));
         }
 
